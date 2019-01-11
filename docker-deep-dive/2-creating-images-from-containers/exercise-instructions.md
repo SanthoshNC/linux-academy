@@ -1,7 +1,5 @@
 ### Creating Images from Containers
 
-NOTE: The solution below assumes Ubuntu 16 distribution.
-
 1. Using the CentOS 6 base image download, start a container based on that image. Be sure that container starts connected to the current terminal in interactive mode and runs the bash command so you are logged in to the command prompt on the container once it boots.
 2. Once you are sitting at a command prompt on the running container, execute the update command (installing all updates for the container OS).
 3. Now that updates are complete, install the Apache Web Server. Once installed, make sure the web server service will start and verify that the container is listening on port 80 (install other software if needed to do so).
