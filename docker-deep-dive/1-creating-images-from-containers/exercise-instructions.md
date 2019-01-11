@@ -1,4 +1,4 @@
-###Installation and Image Setup
+### Installation and Image Setup
 
 1. Update your system as appropriate for the distribution you are using. Use the instructions in the videos OR on the Docker site to add the DOCKER repository for installing the latest copy of Docker for your distribution and version.
 2. Using the appropriate package management commands, install the 'docker' package. Once installed, enable the service so that it starts upon reboot. Additionally, start the 'docker' service and verify it is running.
