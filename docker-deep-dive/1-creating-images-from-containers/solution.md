@@ -76,8 +76,8 @@ root     31263  0.0  8.4 535656 85920 ?        Ssl  03:19   0:00 /usr/bin/docker
 $ sudo groupadd docker
 ```
 ```bash
-# Add the [your user name] user, e.g. 'user' to the end of that line (after the :)
-vim /etc/group
+# Add the [your user name] user, e.g. 'user' to the end of that line 'docker:x:999:' (after the :)
+$ sudo vim /etc/group
 ```
 ```bash
 $ cat /etc/group | grep docker
@@ -90,7 +90,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 hello-world         latest              fce289e99eb9        10 days ago         1.84kB
 ```
 
-4.  Once 'docker' is installed and non-root users can run commands, use the appropriate 'docker' commands and options to download the latest available image in the public repository for Ubuntu. Once downloaded and installed, verify the image appears in the local base image list.
+4.  Once 'docker' is installed and non-root users can run commands, use the appropriate 'docker' commands and options to download the latest available image in the public repository for CentOS. Once downloaded and installed, verify the image appears in the local base image list.
 ```bash
 $ docker pull centos:latest
 ```
