@@ -70,3 +70,48 @@ $ sudo systemctl start docker
 $ ps aux | grep docker
 root     31263  0.0  8.4 535656 85920 ?        Ssl  03:19   0:00 /usr/bin/dockerd -H fd://
 ```
+
+3. Enable the non-root users to run 'docker' commands on the system. Create the appropriate group, add the users you want to have access to 'docker' commands, restart the 'docker' service and verify that non-root users can run basic 'docker' commands.
+```bash
+$ sudo groupadd docker
+```
+```bash
+# Add the [your user name] user, e.g. 'user' to the end of that line (after the :)
+vim /etc/group
+```
+```bash
+$ cat /etc/group | grep docker
+docker:x:999:user
+```
+Log out from your current session and log in again.
+```bash
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              fce289e99eb9        10 days ago         1.84kB
+```
+
+4.  Once 'docker' is installed and non-root users can run commands, use the appropriate 'docker' commands and options to download the latest available image in the public repository for Ubuntu. Once downloaded and installed, verify the image appears in the local base image list.
+```bash
+$ docker pull centos:latest
+```
+```bash
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              fce289e99eb9        10 days ago         1.84kB
+centos              latest              1e1148e4cc2c        5 weeks ago         202MB
+```
+
+5. Start a container based upon the CentOS base image downloaded in Step #4. When you start the container, start it connected to the current terminal, in interactive mode, starting the bash shell for you to connect to. You may exit the container at that time.
+
+```bash
+$ docker run -it docker.io/centos:latest /bin/bash
+[root@06f9eb1207d6 /]#
+```
+```bash
+[root@06f9eb1207d6 /]# exit
+```
+```bash
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                      PORTS               NAMES
+06f9eb1207d6        centos:latest       "/bin/bash"         About a minute ago   Exited (0) 44 seconds ago                       clever_antonelli
+```
