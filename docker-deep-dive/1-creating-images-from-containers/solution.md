@@ -1,6 +1,6 @@
 ### Installation and Image Setup
 
-1. Update your system as appropriate for the distribution you are using, e.g. Ubuntu 16. Use the instructions in on the Docker site to add the DOCKER repository for installing the latest copy of Docker for your distribution and version. 
+1. Update your system as appropriate for the distribution you are using, e.g. Ubuntu 16. Use the instructions on the Docker site to add the DOCKER repository for installing the latest copy of Docker for your distribution and version. 
 
 ```bash
 $ sudo apt-get update
