@@ -2,7 +2,7 @@
 
 NOTE: The solution below assumes Ubuntu 16 distribution.
 
-References: [docker run](https://docs.docker.com/engine/reference/commandline/run/) 
+References: [docker run](https://docs.docker.com/engine/reference/commandline/run/), [docker attach](https://docs.docker.com/engine/reference/commandline/attach/) 
 
 1. Create a container from the 'centos:6' base image on your system. This container does not need to be name but should be run in daemon mode, interactive and connected to the current terminal. Finally, it should start the bash shell on start up
 ```bash
@@ -19,14 +19,45 @@ centos              centos6             0cbf37812bff        3 months ago        
 # --detach, -d Run container in background and print container ID
 # /bin/bash Provide interactive shell
 $ docker run -itd centos:centos6 /bin/bash
+docker run -itd centos:centos6 /bin/bash
 ```
 ```bash
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+30a2227d033f        centos:centos6      "/bin/bash"         50 seconds ago      Up 49 seconds                           dazzling_goldberg
 ```
 ```bash
+$ docker inspect dazzling_goldberg | grep IP
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+                    "IPAMConfig": null,
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
 ```
 ```bash
+$ ping -c 3 172.17.0.2
+PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
+64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.062 ms
+64 bytes from 172.17.0.2: icmp_seq=2 ttl=64 time=0.048 ms
+64 bytes from 172.17.0.2: icmp_seq=3 ttl=64 time=0.048 ms
+
+--- 172.17.0.2 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1998ms
+rtt min/avg/max/mdev = 0.048/0.052/0.062/0.010 ms
 ```
 ```bash
+$ docker attach dazzling_goldberg
+[root@30a2227d033f /]#
 ```
 
 2. Using the appropriate Docker inspection command, find the IP address and name for the running container. Once you have the IP, ping the IP to be sure it is running. Finally, attach to the running container so you are logged into the shell.
