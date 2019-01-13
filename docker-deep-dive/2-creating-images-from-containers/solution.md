@@ -53,3 +53,14 @@ caea59ff8906        centos:centos6      "/bin/bash"         4 minutes ago       
 ```
 
 5. Using the name or ID of the container, commit the changes you made within it to a new base image called "newcentos:withapache" and verify that it shows when you list the images on your system.
+```bash
+$ docker commit caea59ff8906 newcentos:withapache
+```
+```bash
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+newcentos           withapache          cc6399740517        8 seconds ago       306MB
+hello-world         latest              fce289e99eb9        12 days ago         1.84kB
+centos              latest              1e1148e4cc2c        5 weeks ago         202MB
+centos              centos6             0cbf37812bff        3 months ago        194MB
+```
