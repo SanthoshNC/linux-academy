@@ -65,9 +65,6 @@ $ docker attach dazzling_goldberg
 [root@f9d9fa5c92df /]# yum install openssh-server
 ```
 ```bash
-[root@f9d9fa5c92df /]# yum install openssh-clients
-```
-```bash
 [root@f9d9fa5c92df /]# service sshd start        
 Generating SSH2 RSA host key:                           [  OK  ]
 Generating SSH1 RSA host key:                           [  OK  ]
@@ -107,6 +104,7 @@ centos              centos6             0cbf37812bff        3 months ago        
 
 5. Create another container, name this container 'test_ssh'. When creating the container, it should be run in interactive mode and attached to the current terminal running the bash shell. Finally, expose port 22 on the container to port 8022 on the host system. Once logged in, install the Open-SSH server and make sure the service is running. Find the IP address of the container and note it.
 ```bash
+# --publish, -p Publish a container’s port(s) to the host
 $ docker run -it --name="test_ssh" -p 8022:22 docker.io/centos:centos6 /bin/bash 
 [root@4b9dcf55aeae /]#
 ```
