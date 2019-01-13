@@ -19,7 +19,6 @@ centos              centos6             0cbf37812bff        3 months ago        
 # --detach, -d Run container in background and print container ID
 # /bin/bash Provide interactive shell
 $ docker run -itd centos:centos6 /bin/bash
-docker run -itd centos:centos6 /bin/bash
 ```
 
 2. Using the appropriate Docker inspection command, find the IP address and name for the running container. Once you have the IP, ping the IP to be sure it is running. Finally, attach to the running container so you are logged into the shell.
