@@ -2,7 +2,32 @@
 
 NOTE: The solution below assumes Ubuntu 16 distribution.
 
+References: [docker run](https://docs.docker.com/engine/reference/commandline/run/) 
+
+
 1. Using the CentOS 6 base image download, start a container based on that image. Be sure that container starts connected to the current terminal in interactive mode and runs the bash command so you are logged in to the command prompt on the container once it boots.
+```bash
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              fce289e99eb9        12 days ago         1.84kB
+centos              latest              1e1148e4cc2c        5 weeks ago         202MB
+```
+```bash
+# --interactive, -i Keep STDIN open even if not attached
+# --tty, -t Allocate a pseudo-TTY
+# /bin/bash Provide interactive shell
+$ docker run -it centos:latest /bin/bash
+[root@b0f429a086ea /]#
+```
+```bash
+```
+```bash
+```
+```bash
+```
+```bash
+```
+
 2. Once you are sitting at a command prompt on the running container, execute the update command (installing all updates for the container OS).
 3. Now that updates are complete, install the Apache Web Server. Once installed, make sure the web server service will start and verify that the container is listening on port 80 (install other software if needed to do so).
 4. Exit the container. Once the container is stopped, execute the appropriate command to list all stopped containers and locate the name and ID of the container you just exited. Make a note of the name and ID.
