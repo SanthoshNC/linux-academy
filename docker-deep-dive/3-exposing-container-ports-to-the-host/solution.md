@@ -174,9 +174,6 @@ test@172.17.0.2's password:
 [test@4b9dcf55aeae ~]$
 ```
 ```bash
-[test@4b9dcf55aeae ~]$ sudo visudo
-```
-```bash
 [test@4b9dcf55aeae ~]$ sudo ls -la /root
 [sudo] password for test: 
 total 44
