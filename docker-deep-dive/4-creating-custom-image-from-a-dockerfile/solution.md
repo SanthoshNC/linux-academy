@@ -1,5 +1,7 @@
 ### Creating Custom Image from a Dockerfile
 
+Reference: [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
+
 1. Create a directory called 'custom' and change to it. In this directory, create an empty file called "Dockerfile". 
 ```bash
 $ mkdir custom
