@@ -40,25 +40,38 @@ $ docker rm 1468833c7e8e
 ```bash
 $ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                        PORTS                   NAMES
-3e9167755f34        0cbf37812bff        "/bin/bash"              8 minutes ago       Exited (0) 7 minutes ago                              jolly_goodall
+3e9167755f34        0cbf37812bff        "/bin/bash"              8 minutes ago       Exited (0) 7 minutes 
+             jolly_goodall
 ee95b513bc36        nginx:latest        "nginx -g 'daemon of…"   19 hours ago        Exited (255) 14 minutes ago   0.0.0.0:32768->80/tcp   sleepy_ganguly
-f56c826cbb15        nginx:latest        "nginx -g 'daemon of…"   19 hours ago        Exited (0) 19 hours ago                               hardcore_dijkstra
-8dd243619575        centos:centos6      "/bin/bash"              24 hours ago        Exited (0) 24 hours ago                               remote_vol
-c0d66b66b781        centos:centos6      "/bin/bash"              24 hours ago        Exited (130) 24 hours ago                             local_vol
-29dcd2721c3a        centos:latest       "/bin/bash"              33 hours ago        Exited (0) 33 hours ago                               my_container
-4b9dcf55aeae        centos:centos6      "/bin/bash"              47 hours ago        Exited (255) 43 hours ago     0.0.0.0:8022->22/tcp    test_ssh
-b0f429a086ea        centos:latest       "/bin/bash"              2 days ago          Exited (0) 2 days ago                                 wizardly_joliot
-80f41175ca59        centos:centos6      "/bin/bash"              2 days ago          Created                                               serene_noyce
 ```
 ```bash
+$ docker rm jolly_goodall && docker rm sleepy_ganguly
 ```
 ```bash
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS       
 ```
 
 5. Rerun the command executed in Step #2 and then list the base images on your system.
 ```bash
+$ docker images
+REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE
+mycustomimg/withservices   v1                  d703f8ed6b0b        43 hours ago        421MB
+newcentos                  withapache          cc6399740517        2 days ago          306MB
+hello-world                latest              fce289e99eb9        2 weeks ago         1.84kB
+nginx                      latest              7042885a156a        2 weeks ago         109MB
+centos                     centos6             0cbf37812bff        3 months ago        194MB
 ```
 ```bash
+$ docker rmi centos:centos6
+Untagged: centos:centos6
+Untagged: centos@sha256:935c45b2e2c4f01aa5a6ff8625632390c7685835a8dfcfdd50790aabc9c24d11
 ```
 ```bash
+$ docker images
+REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE
+mycustomimg/withservices   v1                  d703f8ed6b0b        43 hours ago        421MB
+newcentos                  withapache          cc6399740517        2 days ago          306MB
+hello-world                latest              fce289e99eb9        2 weeks ago         1.84kB
+nginx                      latest              7042885a156a        2 weeks ago         109MB
 ```
