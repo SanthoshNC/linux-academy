@@ -7,3 +7,4 @@
   * [Creating Custom Image from a Dockerfile](/docker-deep-dive/4-creating-custom-image-from-a-dockerfile)
   * [Managing Containers](/docker-deep-dive/5-managing-containers)
   * [Adding External Content to Containers](/docker-deep-dive/6-adding-external-content-to-containers)
+  * [Base Image Maintenance and Cleanup](/docker-deep-dive/7-base-image-maintenance-and-cleanup)
