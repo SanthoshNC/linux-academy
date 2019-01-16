@@ -8,3 +8,4 @@
   * [Managing Containers](/docker-deep-dive/5-managing-containers)
   * [Adding External Content to Containers](/docker-deep-dive/6-adding-external-content-to-containers)
   * [Base Image Maintenance and Cleanup](/docker-deep-dive/7-base-image-maintenance-and-cleanup)
+  * [Advanced Container Creation at the Command Line](/docker-deep-dive/8-advanced-container-creation-at-the-command-line)
