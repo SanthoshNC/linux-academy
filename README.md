@@ -13,4 +13,4 @@ Reference: https://linuxacademy.com/devops/training/course/name/introduction-to-
   
 ### Certified Jenkins Engineer (2018)
 Reference: https://linuxacademy.com/devops/training/course/name/certified-jenkins-engineer-2018
-  * [Jenkins Installation](/certified-jenkins-engineer-2018/jenkins-installation)
+  * [Jenkins Installation](/certified-jenkins-engineer-2018/1-jenkins-installation)
