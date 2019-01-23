@@ -1,4 +1,4 @@
-### Builind In Jenkins
+### Building In Jenkins
 
 The command that is needed for the shell portion of this lab:
 ```bash
