@@ -116,6 +116,6 @@ bash-4.2$ cat ./.ssh/id_rsa
 bash-4.2$
 ```
 ##### Jenkins UI
-In Manage Jenkins/Manage Nodes add new node named **slave1**: [slave node config](/certified-jenkins-engineer-2018/images/2-slave-node-config.bmp), [slave node credentials config](2-slave-node-creds-config.bmp) 
+In Manage Jenkins/Manage Nodes add new node named **slave1**: [slave node config](/certified-jenkins-engineer-2018/images/2-slave-node-config.bmp?raw=true), [slave node credentials config](2-slave-node-creds-config.bmp?raw=true) 
 
 * Run the maven build on the remote agent.
