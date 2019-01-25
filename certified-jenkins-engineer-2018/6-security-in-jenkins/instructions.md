@@ -17,8 +17,8 @@ You will need to create these folders and some dummy jobs to ensure that the per
   * Create a top level folder named webdev.
   * Enable project security and disallow inheritance.
   * Add james and give him full access.
-* Make a freestyle project named test, and set it to inherit from parent:
-  * Create backend folder and give Diane full access.
+  * Make a freestyle project named test, and set it to inherit from parent.
+* Create backend folder and give Diane full access:
   * Create a top level folder named backend, in the folder config enable project based security.
   * Disable inheritance and add Diane and grant full access
 * Create tomcat folder inside the backend folder and give Laura access to this folder:
