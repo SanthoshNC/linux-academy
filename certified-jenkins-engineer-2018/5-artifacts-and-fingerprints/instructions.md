@@ -11,6 +11,20 @@ You will need 2 git repositories for this lesson:
 2. Backend project: https://github.com/linuxacademy/content-jenkinscert.git
 
 **Objectives**
-* Create the webdev folder and the index project.
-* Install the "copy artifact" plugin
-* Create and build the tomcat project
+* Create the webdev folder and the index project:
+  * Configure maven on the server and name it M3.
+  * Under New Item create a folder named webdev. Inside the webdev folder make a freestyle project named index.
+  * Configure the project using the git repo in the instructions and ensure that the M3 Maven server is configured. 
+  * Run the shell command bin/makeindex and then archive the index.jsp file.
+* Install the "Copy Artifact" plugin:
+  * Navigate to Manage Jenkins > Manage Plugins.
+  * Select available from the tabs at the top.
+  * Search for Copy Artifact plugin.
+  * Click install, select Restart Jenkins.
+  * Wait for Jenkins to restart, you may need to refresh and log back in as student.
+* Create and build the tomcat project:
+  * Inside the backend > tomcat folder create a freestyle project named tomcat.
+  * The first build step should be copy the artifact from the webdev/index job to src/main/webapp in the tomcat job.
+  * Then using the M3 maven server run clean package.
+  * Create a post build step that publshed junit tests from the target/surefire-reports directory.
+  * Run the build and confirm that the tests are published.
