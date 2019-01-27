@@ -14,3 +14,11 @@ Reference: https://linuxacademy.com/devops/training/course/name/introduction-to-
 ### Certified Jenkins Engineer (2018)
 Reference: https://linuxacademy.com/devops/training/course/name/certified-jenkins-engineer-2018
   * [Jenkins Installation](/certified-jenkins-engineer-2018/1-jenkins-installation)
+  * [Building in Jenkins](/certified-jenkins-engineer-2018/2-building-in-jenkins)
+  * [Building from SCM](/certified-jenkins-engineer-2018/3-building-from-scm)
+  * [Distributing a Build](/certified-jenkins-engineer-2018/4-distributing-a-build)
+  * [Artifacts and Fingerprints](/certified-jenkins-engineer-2018/5-artifacts-and-fingerprints)
+  * [Security in Jenkins](/certified-jenkins-engineer-2018/6-security-in-jenkins)
+  * [Parameteriazing Builds](/certified-jenkins-engineer-2018/7-parameteriazing-builds)
+  * [Build Triggers](/certified-jenkins-engineer-2018/8-build-triggers)
+  
