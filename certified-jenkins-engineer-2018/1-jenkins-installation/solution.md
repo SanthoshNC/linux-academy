@@ -48,3 +48,4 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 # 4. Create first admin user.
 # 5. Click on the Save and finish to complete conguration.
 ```
+[Suggested Plugins](/certified-jenkins-engineer-2018/images/1-suggested-plugins-install.bmp?raw=true)
